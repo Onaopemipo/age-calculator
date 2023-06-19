@@ -13,7 +13,7 @@
 
       <div class="item">
         <label for="day" [ngClass]="{error: value}">Month</label>
-        <input type="number" name="month" id="month" placeholder="MM" #month="ngModel" [ngClass]="{inputerror: value}" [(ngModel)]="dob.month"  min="1" max="12" required  clear-input="true">
+        <input type="number" name="month" id="month" placeholder="MM" #month="ngModel" (change)="getit($event)"  [ngClass]="{inputerror: value}" [(ngModel)]="dob.month"  min="1" max="12" required  clear-input="true">
         <div *ngIf="month.invalid && (month.dirty || month.touched) " class="error">
           <div *ngIf="(month.errors?.['required'] || month.errors)">
             This field is required
@@ -24,7 +24,7 @@
 
       <div class="item">
       <label for="day" [ngClass]="{error: value}">Year</label>
-        <input type="number" name="year" placeholder="YYYY" #year="ngModel" [(ngModel)]="dob.year" [ngClass]="{inputerror: value}"  min="1000" max="{{this.currentYear}}" required  clear-input="true">
+        <input type="number" name="year" placeholder="YYYY" #year="ngModel" (change)="getit($event)"  [(ngModel)]="dob.year" [ngClass]="{inputerror: value}"  min="1000" max="{{this.currentYear}}" required  clear-input="true">
         <div *ngIf="year.invalid && (year.dirty || year.touched) " class="error">
           <div *ngIf="(year.errors?.['required'] || year.errors)">
             This field is required

@@ -67,6 +67,8 @@ input {
 
 #diff {
     color: $base-color !important;
+    font-size: 32px;
+    font-weight: 800;
     
 }
 
@@ -97,50 +99,30 @@ label {
 }
 
 
-input.ng-invalid.ng-touched {
-    border: 1px solid $light-red;
-  }
-
-// input:
-
-.button {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: $base-color;
-    padding: 10px;
-    // border: 0px #fff;
-
-}
-
-.button:invalid {
-    border: 1px solid $light-red;
-}
-
 button {
-    height: 75px;
-    width: 75px;
+    height: 70px;
+    width: 78px;
     border-radius: 50%;
     background: $base-color;
     padding: 10px;
     border: 0px #fff;
+    cursor: pointer;
 
 }
 
-.button:active {
-    background-color: $Off-black;
+button:active, button:hover {
+    background-color: #000;
 }
 
 
 
-.res {
+.result {
     font-size: 52px;
     font-weight: 800;
     }
 
 .svg {
-    height: 40px;
-    // width: 23px;
+    height: 30px;
   }
   
 //   .svg:hover {
@@ -166,7 +148,12 @@ button {
     .input-items {
         display:flex;
         flex-wrap: nowrap;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
+    }
+
+    button {
+        height: 52px;
+        width: 53px;
     }
 
     .item {
@@ -182,9 +169,9 @@ button {
     }
 
     input {
-        color: $Smokey-grey;
+        color: #000;
         font-weight: 600;
-        font-size: 15px;
+        font-size: 12px;
         padding: 5px;
         border: 1px solid $Light-grey;
         border-radius: 5px;
@@ -197,27 +184,27 @@ button {
         row-gap: 20px;
     }
 
+    .line {
+        width: 100%;
+        height: 0px;
+        border: 0.2px solid $Light-grey;
+        color: $Smokey-grey;
+    }
+
     .res {
         font-size: 32px;
         font-weight: 600;
         }
 
     .line {
-        margin-bottom: -57px;
+        margin-bottom: -44px;
     }
 
     .svg {
-        height: 32px;
+        height: 22px;
+        font-weight: 900;
       }
 
-      .button {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        background: $base-color;
-        padding: 5px;
-    
-    }
         
     
 }
