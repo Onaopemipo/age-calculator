@@ -1,0 +1,223 @@
+$base-color: hsl(259, 100%, 65%);
+$light-red: hsl(0, 100%, 67%);
+$White: hsl(0, 0%, 100%);
+$Off-white: hsl(0, 0%, 94%);
+$Light-grey: hsl(0, 0%, 86%);
+$Smokey-grey: hsl(0, 1%, 44%);
+$Off-black: hsl(0, 0%, 8%);
+
+.wrapper {
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: $White;
+    padding: 35px;
+    border-radius: 25px 25px 90px;
+    width: 600px;
+}
+
+.input-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    justify-self: flex-start;
+
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    
+}
+
+.line {
+    width: 100%;
+    height: 0px;
+    border: 1px solid $Light-grey;
+    color: $Smokey-grey;
+}
+
+.btn:active {
+    color: #000;
+}
+
+.item input {
+    width: 100px;
+    height: 40px;
+}
+
+input {
+    color: $Smokey-grey;
+    font-weight: 800;
+    font-size: 22px;
+    padding: 5px 15px;
+    border: 1px solid $Light-grey;
+    border-radius: 5px;
+}
+
+#diff {
+    color: $base-color !important;
+    
+}
+
+label {
+    font-size: 12px;
+    letter-spacing: 0.5ch;
+    color: $Smokey-grey;
+    text-transform: uppercase;
+    // border-radius: 5px;
+}
+
+.divider {
+    color: $Off-white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.error {
+    color: $light-red;
+    font-size: 10px;
+    // border: 1px solid $light-red;
+}
+
+.inputerror {
+    border: 1px solid $light-red;
+}
+
+
+input.ng-invalid.ng-touched {
+    border: 1px solid $light-red;
+  }
+
+// input:
+
+.button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: $base-color;
+    padding: 10px;
+    // border: 0px #fff;
+
+}
+
+.button:invalid {
+    border: 1px solid $light-red;
+}
+
+button {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background: $base-color;
+    padding: 10px;
+    border: 0px #fff;
+
+}
+
+.button:active {
+    background-color: $Off-black;
+}
+
+
+
+.res {
+    font-size: 52px;
+    font-weight: 800;
+    }
+
+.svg {
+    height: 40px;
+    // width: 23px;
+  }
+  
+//   .svg:hover {
+//     -webkit-filter: brightness(0) saturate(100%) invert(12%) sepia(83%) saturate(3180%) hue-rotate(230deg) brightness(91%) contrast(81%);
+//             filter: brightness(0) saturate(100%) invert(12%) sepia(83%) saturate(3180%) hue-rotate(230deg) brightness(91%) contrast(81%);
+//   }
+  
+//   .svg:active {
+//     -webkit-filter: brightness(0) saturate(100%) invert(12%) sepia(83%) saturate(3180%) hue-rotate(230deg) brightness(91%) contrast(81%);
+//             filter: brightness(0) saturate(100%) invert(12%) sepia(83%) saturate(3180%) hue-rotate(230deg) brightness(91%) contrast(81%);
+//   }
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        margin-top: 40px;
+        height: 100%;
+        padding: 20px;
+    }
+    .container {
+        width: 100%;
+    }
+
+    .input-items {
+        display:flex;
+        flex-wrap: nowrap;
+        margin-bottom: 40px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        padding-right: 5px;
+        
+    }
+
+    .item input {
+        width: 70px;
+        height: 20px;
+    }
+
+    input {
+        color: $Smokey-grey;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 5px;
+        border: 1px solid $Light-grey;
+        border-radius: 5px;
+}
+    .divider {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .res {
+        font-size: 32px;
+        font-weight: 600;
+        }
+
+    .line {
+        margin-bottom: -45px;
+    }
+
+    .svg {
+        height: 32px;
+      }
+
+      .button {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background: $base-color;
+        padding: 10px;
+    
+    }
+        
+    
+}
