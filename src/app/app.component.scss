@@ -11,7 +11,7 @@ $Off-black: hsl(0, 0%, 8%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 100vh;
 
 }
 
@@ -22,8 +22,9 @@ $Off-black: hsl(0, 0%, 8%);
     align-items: flex-start;
     background-color: $White;
     padding: 35px;
-    border-radius: 25px 25px 90px;
+    border-radius: 25px 25px 195px;
     width: 600px;
+    margin: 5vh;
 }
 
 .input-items {
@@ -53,7 +54,7 @@ $Off-black: hsl(0, 0%, 8%);
 
 .item input {
     width: 100px;
-    height: 40px;
+    // height: 40px;
 }
 
 input {
@@ -117,6 +118,8 @@ button:active, button:hover {
 
 
 .result {
+    display: flex;
+    flex-direction: column;
     font-size: 52px;
     font-weight: 800;
     }
@@ -191,7 +194,7 @@ button:active, button:hover {
         color: $Smokey-grey;
     }
 
-    .res {
+    .result {
         font-size: 32px;
         font-weight: 600;
         }

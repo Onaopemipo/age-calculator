@@ -1,9 +1,12 @@
 <div class="wrapper">
+  <!-- {{this.value}} {{this.dob.day}} {{this.dob.month}} {{this.dob.year}} -->
+  {{this.value}}
+  {{this.validYear}}
   <div class="container">
     <div class="input-items" [ngClass]="{error: value}">
       <div class="item">
-        <label for="day" [ngClass]="{error: value}">Day</label>
-        <input type="number" name="day" id="day" placeholder="DD" #day="ngModel" (change)="getit($event)" [ngClass]="{inputerror: value}" [(ngModel)]="dob.day"   min="1" max="31" required clear-input="true">
+        <label [ngClass]="{error: value}">Day</label>
+        <input type="number" name="day" placeholder="DD" (change)="getit($event)" #day="ngModel" [ngClass]="{inputerror: value}" [(ngModel)]="dob.day"   min="1" max="31" required>
         <div *ngIf="day.invalid && (day.dirty || day.touched) " class="error">
           <div *ngIf="(day.errors?.['required'] || day.errors)">
             This field is required
@@ -12,8 +15,8 @@
       </div>
 
       <div class="item">
-        <label for="day" [ngClass]="{error: value}">Month</label>
-        <input type="number" name="month" id="month" placeholder="MM" #month="ngModel" (change)="getit($event)"  [ngClass]="{inputerror: value}" [(ngModel)]="dob.month"  min="1" max="12" required  clear-input="true">
+        <label [ngClass]="{error: value}">Month</label>
+        <input type="number" name="month" placeholder="MM" (change)="getit($event)" #month="ngModel" [(ngModel)]="dob.month" [ngClass]="{inputerror: value}"  min="1" max="12" required >
         <div *ngIf="month.invalid && (month.dirty || month.touched) " class="error">
           <div *ngIf="(month.errors?.['required'] || month.errors)">
             This field is required
@@ -23,8 +26,8 @@
       </div>
 
       <div class="item">
-      <label for="day" [ngClass]="{error: value}">Year</label>
-        <input type="number" name="year" placeholder="YYYY" #year="ngModel" (change)="getit($event)"  [(ngModel)]="dob.year" [ngClass]="{inputerror: value}"  min="1000" max="{{this.currentYear}}" required  clear-input="true">
+      <label [ngClass]="{error: value}">Year</label>
+        <input type="number" name="year" placeholder="YYYY" #year="ngModel" (change)="getit($event)" [(ngModel)]="dob.year" [ngClass]="{inputerror: value}"  min="1000" max="{{this.currentYear}}" required>
         <div *ngIf="year.invalid && (year.dirty || year.touched) " class="error">
           <div *ngIf="(year.errors?.['required'] || year.errors)">
             This field is required
@@ -34,21 +37,21 @@
     </div>
     <div class="divider">
       <div class="line"></div>
-      <button type="button" (click)="verify()">
+      <button type="button" (click)="submit()">
         <img src="assets/images/icon-arrow.svg" class="svg" alt="">
       </button>
     </div>
 
     <div class="result">
-      <p class="res">
+      <span>
         <span *ngIf="emptyDay" id="diff">--</span>
-        <span *ngIf="!emptyDay" id="diff">{{ this.ageYears }}</span>years</p>
-      <p class="res">
+        <span *ngIf="!emptyDay" id="diff">{{ this.ageYears }}</span>years</span>
+      <span>
         <span *ngIf="emptyMonth" id="diff">--</span>
-        <span *ngIf="!emptyMonth" id="diff">{{ this.ageMonths }}</span>months</p>
-      <p class="res">
+        <span *ngIf="!emptyMonth" id="diff">{{ this.ageMonths }}</span>months</span>
+      <span>
         <span *ngIf="emptyYear" id="diff">--</span>
-        <span *ngIf="!emptyYear" id="diff">{{ this.ageDays }}</span>days</p>
+        <span *ngIf="!emptyYear" id="diff">{{ this.ageDays }}</span>days</span>
     </div>
   </div>
 </div>
