@@ -68,7 +68,7 @@ input {
 
 .diff {
     color: $base-color !important;
-    font-size: 32px;
+    font-size: 62px;
     font-weight: 800;
     
 }
@@ -120,8 +120,9 @@ button:active, button:hover {
 .result {
     display: flex;
     flex-direction: column;
-    font-size: 52px;
-    font-weight: 800;
+    justify-content: center;
+    font-size: 62px;
+    font-weight: 800i;
     }
 
 .svg {
