@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="container">
-    <div class="input-items" [ngClass]="{error: value}">
+    <main class="input-items" [ngClass]="{error: value}">
       <div class="item">
         <label [ngClass]="{error: value}">Day</label>
         <input type="number" name="day" placeholder="DD" (change)="getit($event)" #day="ngModel" [ngClass]="{inputerror: value}" [(ngModel)]="dob.day"   min="1" max="31" required>
@@ -31,7 +31,7 @@
           </div>
       </div>
       </div>
-    </div>
+    </main>
     <div class="divider">
       <div class="line"></div>
       <button type="button" (click)="submit()">
@@ -39,17 +39,17 @@
       </button>
     </div>
 
-    <div class="result">
+    <main class="result">
       <span>
-        <span *ngIf="emptyDay" id="diff">--</span>
-        <span *ngIf="!emptyDay" id="diff">{{ this.ageYears }}</span>years</span>
+        <span *ngIf="emptyDay" class="diff">--</span>
+        <span *ngIf="!emptyDay" class="diff">{{ this.ageYears }}</span>years</span>
       <span>
-        <span *ngIf="emptyMonth" id="diff">--</span>
-        <span *ngIf="!emptyMonth" id="diff">{{ this.ageMonths }}</span>months</span>
+        <span *ngIf="emptyMonth" class="diff">--</span>
+        <span *ngIf="!emptyMonth" class="diff">{{ this.ageMonths }}</span>months</span>
       <span>
-        <span *ngIf="emptyYear" id="diff">--</span>
-        <span *ngIf="!emptyYear" id="diff">{{ this.ageDays }}</span>days</span>
-    </div>
+        <span *ngIf="emptyYear" class="diff">--</span>
+        <span *ngIf="!emptyYear" class="diff">{{ this.ageDays }}</span>days</span>
+    </main>
   </div>
 </div>
 
